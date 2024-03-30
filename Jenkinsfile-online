@@ -80,7 +80,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                input(id: 'deploy-to-dev', message: 'deploy to dev?')
+                input(id: 'deploy-to-dev', message: 'deploy to dev?', submitter: 'project-admin,admin')
                 container("maven") {
                     withCredentials([
                             kubeconfigFile(
@@ -103,7 +103,7 @@ pipeline {
             }
             steps {
                 container('maven') {
-                    input(id: 'release-image-with-tag', message: 'release image with tag?')
+                    input(id: 'release-image-with-tag', message: 'release image with tag?', submitter: 'project-admin,admin')
                     withCredentials([usernamePassword(credentialsId: "$GITHUB_CREDENTIAL_ID", passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh 'git config --global user.email "765272297@qq.com" '
                         sh 'git config --global user.name "caihanbo" '
@@ -122,7 +122,7 @@ pipeline {
                 }
             }
             steps {
-                input(id: 'deploy-to-production', message: 'deploy to production?')
+                input(id: 'deploy-to-production', message: 'deploy to production?', submitter: 'project-admin,admin')
                 container("maven") {
                     withCredentials([
                             kubeconfigFile(
