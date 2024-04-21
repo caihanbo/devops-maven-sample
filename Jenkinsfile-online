@@ -10,11 +10,11 @@ pipeline {
     }
 
     environment {
-        DOCKER_CREDENTIAL_ID = 'harbor'
-        GITHUB_CREDENTIAL_ID = 'github'
+        DOCKER_CREDENTIAL_ID = 'harbor-id'
+        GITHUB_CREDENTIAL_ID = 'github-id'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
         REGISTRY = 'www.harbor.com'
-        DOCKERHUB_NAMESPACE = 'kubesphere'
+        DOCKERHUB_NAMESPACE = 'devops'
         GITHUB_ACCOUNT = 'caihanbo'
         APP_NAME = 'devops-java-sample'
     }
