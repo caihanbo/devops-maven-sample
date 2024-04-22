@@ -17,7 +17,7 @@ pipeline {
         REGISTRY = 'www.harbor.com'
         DOCKERHUB_NAMESPACE = 'devops'
         GITHUB_ACCOUNT = 'caihanbo'
-        APP_NAME = 'devops-java-sample'
+        APP_NAME = 'devops-maven-sample'
     }
 
     stages {
