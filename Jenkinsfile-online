@@ -12,6 +12,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIAL_ID = 'harbor-id'
         //GITHUB_CREDENTIAL_ID = 'github-id'
+        //#使用 Jenkinsfile 创建流水线使用
         GITHUB_CREDENTIAL_ID = 'github-token'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
         REGISTRY = 'www.harbor.com'
