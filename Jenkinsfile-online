@@ -16,7 +16,7 @@ pipeline {
         GITHUB_CREDENTIAL_ID = 'github-token'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
         REGISTRY = 'www.harbor.com'
-        DOCKERHUB_NAMESPACE = 'kubesphere'
+        DOCKERHUB_NAMESPACE = 'devops'
         GITHUB_ACCOUNT = 'caihanbo'
         APP_NAME = 'devops-maven-sample'
         SONAR_CREDENTIAL_ID = 'sonar-token'
